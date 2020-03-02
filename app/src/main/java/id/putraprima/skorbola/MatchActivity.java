@@ -3,6 +3,7 @@ package id.putraprima.skorbola;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 
 public class MatchActivity extends AppCompatActivity {
 
@@ -15,5 +16,11 @@ public class MatchActivity extends AppCompatActivity {
         //2.Tombol add score menambahkan memindah activity ke scorerActivity dimana pada scorer activity di isikan nama pencetak gol
         //3.Dari activity scorer akan mengirim kembali ke activity matchactivity otomatis nama pencetak gol dan skor bertambah +1
         //4.Tombol Cek Result menghitung pemenang dari kedua tim dan mengirim nama pemenang beserta nama pencetak gol ke ResultActivity, jika seri di kirim text "Draw",
+    }
+
+    public void addHome_handler(View view) {
+    }
+
+    public void addAway_handler(View view) {
     }
 }

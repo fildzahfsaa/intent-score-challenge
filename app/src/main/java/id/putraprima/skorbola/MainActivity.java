@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         //3. Ganti Logo Home Team
         //4. Ganti Logo Away Team
         //5. Next Button Pindah Ke MatchActivity
-
         homeTeam = findViewById(R.id.home_team);
         awayTeam = findViewById(R.id.away_team);
         homeImage = findViewById(R.id.home_logo);
@@ -57,10 +56,9 @@ public class MainActivity extends AppCompatActivity {
         String home = homeTeam.getText().toString();
         String away = awayTeam.getText().toString();
 
-        if (home.equals("") || away.equals("")){
+        if (home.equals("") || away.equals("")) {
             Toast.makeText(this, "Harap isi data!", Toast.LENGTH_SHORT).show();
-        }
-        else {
+        } else {
             homeImage.setDrawingCacheEnabled(true);
             home_logo = homeImage.getDrawingCache();
             awayImage.setDrawingCacheEnabled(true);
@@ -75,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
 
     public void changeHomePict(View view) {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
