@@ -21,7 +21,7 @@
         android:id="@+id/home_logo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,8 +39,8 @@
         android:id="@+id/score_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:text="3"
+        android:layout_marginTop="76dp"
+        android:text="0"
         android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
@@ -74,7 +74,7 @@
         android:id="@+id/away_logo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="28dp"
         app:layout_constraintBottom_toTopOf="@+id/txt_away"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
@@ -85,12 +85,12 @@
         android:id="@+id/score_away"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="104dp"
-        android:text="3"
+        android:layout_marginBottom="76dp"
+        android:text="0"
         android:textSize="80sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -109,10 +109,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cek Hasil"
+        android:onClick="hasilHandler"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="114dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="132dp"
+        android:text="Home Team"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_home"
+        app:layout_constraintEnd_toStartOf="@+id/score_home"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_home"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Away Team"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_away"
+        app:layout_constraintEnd_toStartOf="@+id/score_away"
+        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintStart_toEndOf="@+id/away_logo"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_away"
+        app:layout_constraintVertical_bias="0.325" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
