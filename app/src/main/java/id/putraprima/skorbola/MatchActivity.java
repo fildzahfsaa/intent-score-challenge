@@ -71,23 +71,25 @@ public class MatchActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        if(resultCode == RESULT_CANCELED){
+            return;
+        }
         if (requestCode == REQUEST_CODE_HOME) {
-            String returnString = data.getStringExtra("keyName");
-            TextView TVhome = (TextView) findViewById(R.id.textView4);
-            String ScorerHome = "";
-            ScorerHome += " "+returnString;
-            TVhome.setText(ScorerHome);
-            scoreHome++;
-            score_Home.setText(String.valueOf(scoreHome));
-
+                String returnString = data.getStringExtra("keyName");
+                TextView TVhome = (TextView) findViewById(R.id.textView4);
+                String ScorerHome = "";
+                ScorerHome += " " + returnString;
+                TVhome.setText(ScorerHome);
+                scoreHome++;
+                score_Home.setText(String.valueOf(scoreHome));
         } else if (requestCode == REQUEST_CODE_AWAY) {
-            TextView TVhome = (TextView) findViewById(R.id.textView5);
-            String returnString = data.getStringExtra("keyName");
-            String ScorerAway = "";
-            ScorerAway += " "+returnString;
-            TVhome.setText(ScorerAway);
-            scoreAway++;
-            score_Away.setText(String.valueOf(scoreAway));
+                TextView TVhome = (TextView) findViewById(R.id.textView5);
+                String returnString = data.getStringExtra("keyName");
+                String ScorerAway = "";
+                ScorerAway += " " + returnString;
+                TVhome.setText(ScorerAway);
+                scoreAway++;
+                score_Away.setText(String.valueOf(scoreAway));
         }
     }
 
